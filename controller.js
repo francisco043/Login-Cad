@@ -7,7 +7,7 @@ function acessar(){
   
        }else{
         // else{ alert('campos preenchisdos com sucesso'); }
-        window.location.hrefc = 'cadastro.html'
+        window.location.href = 'cadastro.html';
        }
  }
   
@@ -15,14 +15,14 @@ function acessar(){
  //------------------------------------------------------------------------------------------------------------------------
  var dadosLista = [];
  function salvarUser() {
-    let nomeUser = document.getElementById ("nomeuser").value;
-
+    let nomeUser = document.getElementById('nomeUser').value;
+    
     if (nomeUser){
-
+         dadosLista.push(nomeUser);
+         console.log(dadosLista);
     }else{
         alert("favor informe um nome para cadastro");
     }
-
 
  }
  
