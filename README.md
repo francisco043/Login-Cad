@@ -8,6 +8,11 @@
 
 #  ⚒ FUNCIONALIDADES DO JAVA ⚒
 
+![](![](png-java.png))
+
+![](![](![](cap-png.png)))
+
+
  >* `` A funcao acessar, verifica se os campo de nome foram preenchidos no formulário de login, validando a informacao.``
 
 >* ``A função salvarUser adiciona um nome na lista de usuários atualizando a tabela na página de cadastro e dando opcao de arrumar o campo de mensagem.``
