@@ -1,6 +1,10 @@
+//ACESSAR O LOGIN E MANDAR PARA A PAGINA DO CADASTRO 
+
 function acessar() {
    let loginEmail = document.getElementById('loginEmail').value;
    let loginSenha = document.getElementById('loginSenha').value;
+
+   // VERIFICAR SE TODOS OS CAMPOS ESTAO PREENCHIDOS --------------------------------------
 
    if (!loginEmail || !loginSenha) {
       alert('favor preencher todos os campos');
@@ -14,21 +18,28 @@ function acessar() {
 // FUNÇÃO PARA ARMAZENAMENTO DE NOMES EM ARRAY
 //------------------------------------------------------------------------------------------------------------------------
 var dadosLista = [];
+
+// FUNCAO PARA SALVAR USUARIO NA LISTA
+
 function salvarUser() {
    let nomeUser = document.getElementById('nomeUser').value;
 
    if (nomeUser) {
+      // ADICIONA NOME A LISTA 
+
       dadosLista.push(nomeUser);
       //console.log(dadosLista);
       crialista();
       document.getElementById("nomeUser").value = "";
    } else {
+      // LIMPA O CAMPO DE ENTRADA
+
       alert("favor informe um nome para cadastro");
    }
 
 }
 
-// FUNCAO PARA CRIAR LISTA DE USUARIOS
+// FUNCAO PARA CRIAR LISTA DE USUARIOS ----------------------------------------------------------------------
 
 // PEGA NOME DE AREY E COLOCA PARA NOME DE USUARIOS
 
@@ -43,13 +54,13 @@ function crialista() {
    }
 }
 
-// FUNCAO PARA EDITAR NOME DE LISTA
+// FUNCAO PARA EDITAR NOME DE LISTA ----------------------------------------------------------------------------
 function editar(i) {
    document.getElementById("nomeUser").value = dadosLista[(i - 1)];
    dadosLista.splice(dadosLista[(i - 1)], 1);
 }
 
-// FUNCAO PARA EXCLUIR NOME DE LISTA
+// FUNCAO PARA EXCLUIR NOME DE LISTA -----------------------------------------------------------------------------------------
 
 function excluir (i){
    dadosLista.splice((i - 1), 1);
