@@ -23,14 +23,16 @@ var dadosLista = [];
 
 function salvarUser() {
    let nomeUser = document.getElementById('nomeUser').value;
+   let emailUser = document.getElementById('emailUser').value;
 
-   if (nomeUser) {
+   if (nomeUser && emailUser) {
       // ADICIONA NOME A LISTA 
 
-      dadosLista.push(nomeUser);
+      dadosLista.push(nomeUser, emailUser);
       //console.log(dadosLista);
       crialista();
       document.getElementById("nomeUser").value = "";
+      document.getElementById("emailUser").value = "";
    } else {
       // LIMPA O CAMPO DE ENTRADA
 
@@ -46,9 +48,9 @@ function salvarUser() {
 // DEFINICAO DO TAMANHO AREY
 // PEGA A POSICAO QUE ESTA O AREY 
 function crialista() {
-   let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th> Ações </th></tr>";
-   for (let i = 0; i <= (dadosLista.length - 1); i++) {
-      tabela += "<tr><td>" + dadosLista[i] + "</td><td><button type ='button' onclick = 'editar(parentNode.parentNode.rowIndex)'>editar</button ><button type ='button' onclick = 'excluir(parentNode.parentNode.rowIndex)'>excluir</button ></td ></tr ></td ></tr > ";
+   let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th>Email Usuário</th><th> Ações </th></tr>";
+   for (let i = 0; i <= (dadosLista.length - 2); i++) {
+      tabela += "<tr><td>" + dadosLista[i] + "</td><td>" + dadosLista[1] + "</td> <td><button type ='button' onclick = 'editar(parentNode.parentNode.rowIndex)'>editar</button ><button type ='button' onclick = 'excluir(parentNode.parentNode.rowIndex)'>excluir</button ></td ></tr ></td ></tr > ";
       document.getElementById('tabela').innerHTML = tabela;
 
    }
@@ -65,6 +67,5 @@ function editar(i) {
 function excluir (i){
    dadosLista.splice((i - 1), 1);
 
-document.getElementById("tabela").deleteRow(i);
-
+   document.getElementById("tabela").deleteRow(i);
 }

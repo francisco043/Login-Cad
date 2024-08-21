@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset='utf-8'>
@@ -16,6 +16,8 @@
         <div class="container">
             <label for="">Nome</label> <br>
             <input type="text" class="form-control" id="nomeUser"><br>
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="emailUser"><br>
             <button onclick="salvarUser()" type="button" class="btn btn-danger">SALVAR</button>
         </div>
         <br>
@@ -23,6 +25,7 @@
             <table class="table table-striped" id="tabela">
                 <tr>
                     <th>Nome Usuário</th>
+                    <th>Email Usuário</th>
                     <th> Ações </th>
                 </tr>
             </table>
