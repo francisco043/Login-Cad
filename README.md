@@ -39,9 +39,15 @@
 >* let
 >* if
 
+>* ``Foto do projeto onde mostra nome email, e botoes de editar salvar e excluir.``
+
 ![](printtrabalho.png)
 
-FRANCISCO
+
+>* ``Foto do projeto onde mostra um alerta caso os campos nao estejam completos.``
+
+![](projeto.png)
 
 LINK DA PAGINA  https://francisco043.github.io/Login-Cad/
-![](img/tela-login.png)
+
+FRANCISCO
